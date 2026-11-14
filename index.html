@@ -806,8 +806,9 @@ footer{padding:60px 0 42px;color:var(--muted);font-size:15px}
         To collect sign-ups, set data-endpoint to a form service URL that accepts a JSON POST
         (for example a Formspree, Basin or Getform endpoint, or your own API). See README.md.
       -->
-      <form class="waitlist" id="waitlistForm" data-endpoint="" novalidate>
+      <form class="waitlist" id="waitlistForm" data-endpoint="https://formspree.io/f/mzerdoyb" novalidate>
         <label class="sr-only" for="waitlistEmail">Email address</label>
+        <input type="text" name="_gotcha" id="waitlistTrap" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
         <input type="email" id="waitlistEmail" name="email" placeholder="you@example.com" autocomplete="email" required>
         <button type="submit" class="btn btn-primary">Notify me</button>
       </form>
@@ -882,7 +883,7 @@ footer{padding:60px 0 42px;color:var(--muted);font-size:15px}
       return;
     }
     btn.disabled=true;say('Adding you to the list…','info');
-    fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email:v,source:'tamish-website'})})
+    fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email:v,source:'tamish-website',_subject:'New Tamish waitlist sign-up',_gotcha:document.getElementById('waitlistTrap').value})})
       .then(function(r){
         if(!r.ok)throw new Error(r.status);
         say('You’re on the list. We’ll email you the day Tamish launches.','ok');form.reset();

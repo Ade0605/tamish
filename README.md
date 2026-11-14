@@ -11,7 +11,11 @@ It is static HTML with no build step. It is published to GitHub Pages at **https
 
 Brand colours sampled from the logo: navy `#0D3161`, orange `#F99235`.
 
-## Turn on the waitlist
+## The waitlist
+
+Sign-ups go to Formspree (`https://formspree.io/f/mzerdoyb`), set in `data-endpoint` on the form in `index.html`. Each sign-up is emailed to the Formspree account owner and listed in the Formspree dashboard. A hidden `_gotcha` field catches simple spam bots.
+
+### Changing the form service
 
 The form does not save anything until you connect it. Until then, a visitor who submits sees "Sign-ups open very soon" and no address is stored.
 To collect addresses, set `data-endpoint` on the form in `index.html` to any URL that accepts a JSON `POST` of `{"email": "...", "source": "tamish-website"}`. That can be a form service such as Formspree, Basin or Getform, or your own API:
