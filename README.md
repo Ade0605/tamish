@@ -1,11 +1,12 @@
 # Tamish website
 
 Marketing site for Tamish, the family organizer with a Benefits Finder built in.
-It is static HTML with no build step. It is published to GitHub Pages at **https://tamish.app** by `.github/workflows/pages.yml` on every push to `main`.
+It is static HTML. Cloudflare Pages publishes it at **https://tamish.app** on every push to `main` (see *Hosting on Cloudflare Pages* below).
 
 ## Files
 
-- `index.html`: the whole page (HTML, CSS and a small script)
+- `index.html`: the home page
+- `build.sh` and `_headers`: what Cloudflare Pages publishes, and the security headers it sends
 - `privacy.html` and `terms.html`: draft privacy policy and terms of use, styled by `assets/legal.css`
 - `assets/site.css`, `assets/main.js`, `assets/js-on.js` and `assets/fonts.css`: the home page's styles and scripts and the self-hosted fonts, kept out of the HTML so the Content Security Policy can forbid inline code
 - `assets/`: logo files made from the supplied artwork (the navy mark and the navy and orange wordmarks), with white and orange recolours, the favicon, the Apple touch icon and the social share image (`og-image.png`)
@@ -31,15 +32,6 @@ To collect addresses, set `data-endpoint` on the form in `index.html` to any URL
 - When the apps are in the stores, replace the "Coming soon" badges with links to the store listings.
 - Fill in the highlighted placeholders in `privacy.html` and `terms.html` (company name, address, contact email, hosting and email providers, governing law), remove the "Draft for review" notes, and have a lawyer review both.
 
-## Hosting at tamish.app
-
-1. **Turn on Pages:** Settings → Pages → Build and deployment → **Source: GitHub Actions**.
-2. **DNS at your registrar** for `tamish.app`:
-   - `A` records for `@`: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - `AAAA` records for `@`: `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153`
-   - `CNAME` record for `www`: `ade0605.github.io`
-3. **Custom domain:** Settings → Pages → Custom domain: `tamish.app`, Save, then tick **Enforce HTTPS** once the certificate is issued (can take up to a day). `.app` domains only work over HTTPS.
-4. Optional but recommended: verify the domain under your GitHub profile → Settings → Pages, so no one else can claim it.
 
 ## Security
 

@@ -21,4 +21,5 @@ The Tamish app has not launched yet and is not covered here.
 - **HTTPS only:** `.app` domains are on the browsers' HSTS preload list, so browsers never load the site over plain HTTP.
 - **Content Security Policy:** every page allows scripts, styles, fonts and images only from tamish.app, and allows network requests only to Formspree from the home page. No inline scripts or styles are allowed.
 - **No third parties:** fonts are self-hosted, and there are no analytics, ads or trackers.
-- **Supply chain:** the deploy workflow pins every action to a commit SHA, runs with the least permissions it needs, and Dependabot proposes updates weekly.
+- **Security headers:** Cloudflare Pages sends HSTS, `X-Frame-Options: DENY`, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`, COOP/CORP and the Content Security Policy (with `frame-ancestors 'none'`) on every response, from `_headers`.
+- **Build:** Cloudflare Pages runs `build.sh`, which publishes only the public files.
