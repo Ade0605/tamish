@@ -27,7 +27,7 @@ jobs:
       - name: Assemble the site (pages and assets only)
         run: |
           mkdir _site
-          cp index.html privacy.html terms.html CNAME .nojekyll _site/
+          cp index.html privacy.html terms.html 404.html robots.txt sitemap.xml CNAME .nojekyll _site/
           cp -r assets _site/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

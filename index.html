@@ -3,14 +3,110 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tamish — The family organizer that finds your benefits</title>
-<meta name="description" content="Tamish is the family organizer with a Benefits Finder built in: a shared calendar, lists and meals, plus a guide to the family support your country offers. No ads. One price for the whole household.">
+<title>Tamish: Family Organizer App with a Benefits Finder</title>
+<meta name="description" content="Tamish is a family organizer app: a shared family calendar, lists, chores and meal plans, plus a Benefits Finder that shows what support your family may be entitled to. No ads.">
+<link rel="canonical" href="https://tamish.app/">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#0D3161">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Tamish — Family life, organized. Benefits, found.">
-<meta property="og:description" content="A shared family calendar, lists and meals, plus a Benefits Finder that shows what support your family may be entitled to.">
+<meta property="og:site_name" content="Tamish">
+<meta property="og:url" content="https://tamish.app/">
+<meta property="og:title" content="Tamish: Family life, organized. Benefits, found.">
+<meta property="og:description" content="A shared family calendar, lists and meal plans, plus a Benefits Finder that shows what support your family may be entitled to.">
 <meta property="og:image" content="https://tamish.app/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Tamish logo on navy">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tamish: Family life, organized. Benefits, found.">
+<meta name="twitter:description" content="A shared family calendar, lists and meal plans, plus a Benefits Finder that shows what support your family may be entitled to.">
+<meta name="twitter:image" content="https://tamish.app/assets/og-image.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://tamish.app/#org",
+   "name": "Tamish",
+   "url": "https://tamish.app/",
+   "logo": "https://tamish.app/assets/apple-touch-icon.png"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://tamish.app/#website",
+   "name": "Tamish",
+   "url": "https://tamish.app/",
+   "publisher": {
+    "@id": "https://tamish.app/#org"
+   },
+   "inLanguage": "en"
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://tamish.app/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "When does Tamish launch?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "We're getting ready for launch on iPhone and Android. Join the waitlist and we'll email you once, on the day the app is available in your country."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How does the Benefits Finder know what applies to us?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "You choose your country and region, and Tamish matches the schemes there against your family profile: children's ages, household income band and work status. Each scheme shows “likely”, “possibly” or “unlikely”, with the reasons and a link to the official source. It's guidance, not a decision: the official body that runs the scheme always makes the final call."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is the benefits information kept up to date?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Every entry links to its official government source and shows when it was last checked. Entries are reviewed on a regular schedule and after budget announcements, and each page has a button to report anything that looks wrong."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What's free, and what needs Premium?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The calendar, lists, chores and the benefits guide with eligibility checks are free, with no ads and no member limit. Premium adds value estimates, deadline and renewal reminders, claim tracking, unlimited captures and calendar sync, for one price that covers the whole household."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does everyone in the family need to install the app?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Grandparents, sitters and co-parents can receive tasks and confirm events from a text-message link, with no app and no account."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What do you do with our family's data?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "We use it to run Tamish for you, and nothing else. We don't show ads, and we never sell or share your family's information. Tamish is paid for by the optional Premium subscription."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can we bring our calendar from another app?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Any app that exports a calendar feed (ICS) can be imported in one step, and lists can be brought over with a guided import."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
 <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -337,7 +433,7 @@ footer{padding:60px 0 42px;color:var(--muted);font-size:15px}
 <!-- ================= NAV ================= -->
 <nav class="nav" aria-label="Main">
   <div class="nav-inner">
-    <a class="logo" href="#top"><img src="assets/tamish-wordmark-navy.png" alt="Tamish home" width="800" height="176"></a>
+    <a class="logo" href="#top"><img src="assets/tamish-wordmark-navy-sm.png" alt="Tamish home" width="320" height="70"></a>
     <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><svg class="icon"><use href="#i-menu"/></svg></button>
     <div class="nav-links" id="navLinks">
       <a href="#features">Features</a>
@@ -374,7 +470,7 @@ footer{padding:60px 0 42px;color:var(--muted);font-size:15px}
       <div class="phone" role="img" aria-label="The Tamish app showing a shared family calendar for November 2026, with soccer practice today, Mia's birthday on Saturday and a childcare reconfirmation due in three days">
         <div class="statusbar" aria-hidden="true"><span>9:41</span><span>5G</span></div>
         <div class="apphead" aria-hidden="true">
-          <span class="title"><img src="assets/tamish-mark-navy.png" alt="">November</span>
+          <span class="title"><img src="assets/tamish-mark-navy-sm.png" alt="" width="160" height="131">November</span>
           <span class="act">+</span>
         </div>
         <div class="body" aria-hidden="true">
@@ -569,7 +665,7 @@ footer{padding:60px 0 42px;color:var(--muted);font-size:15px}
       <table class="compare-table">
         <caption class="sr-only">Tamish compared with a typical family organizer app</caption>
         <thead>
-          <tr><th scope="col"><span class="sr-only">Feature</span></th><th scope="col" class="us"><img src="assets/tamish-wordmark-white.png" alt="Tamish" width="800" height="176"></th><th scope="col">Typical family app</th></tr>
+          <tr><th scope="col"><span class="sr-only">Feature</span></th><th scope="col" class="us"><img src="assets/tamish-wordmark-white-sm.png" alt="Tamish" width="320" height="70" loading="lazy"></th><th scope="col">Typical family app</th></tr>
         </thead>
         <tbody>
           <tr><th scope="row">Benefits guide for your country</th><td class="us yes"><svg class="icon"><use href="#i-check-circle"/></svg>Built in</td><td class="typ">Not offered</td></tr>
@@ -703,7 +799,7 @@ footer{padding:60px 0 42px;color:var(--muted);font-size:15px}
 <section id="waitlist" style="padding-top:16px">
   <div class="wrap">
     <div class="cta reveal">
-      <img class="mark" src="assets/tamish-mark-navy.png" alt="" width="312" height="256">
+      <img class="mark" src="assets/tamish-mark-navy-sm.png" alt="" width="160" height="131" loading="lazy">
       <h2>Ready for a calmer family life?</h2>
       <p class="sub">Tamish is coming soon to iPhone and Android. Leave your email and we'll tell you the day it launches.</p>
       <!--
@@ -731,7 +827,7 @@ footer{padding:60px 0 42px;color:var(--muted);font-size:15px}
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <img src="assets/tamish-wordmark-navy.png" alt="Tamish" width="800" height="176">
+        <img src="assets/tamish-wordmark-navy-sm.png" alt="Tamish" width="320" height="70" loading="lazy">
         <p style="margin-top:12px;max-width:40ch">The family organizer that finds your benefits. Made for busy families everywhere.</p>
       </div>
       <ul class="foot-links" aria-label="Footer">
