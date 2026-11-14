@@ -44,3 +44,13 @@ To collect addresses, set `data-endpoint` on the form in `index.html` to any URL
 ## Security
 
 See [SECURITY.md](SECURITY.md) for how to report a problem and how the site is protected. Keep pages free of inline `<script>`, `<style>` and `style=""`: the Content Security Policy blocks them.
+
+## Hosting on Cloudflare Pages
+
+Cloudflare Pages builds the site from this repository on every push to `main` and sends the security headers in `_headers`.
+
+- **Build command:** `sh build.sh`
+- **Build output directory:** `_site`
+- **Custom domains:** `tamish.app` and `www.tamish.app`
+
+`build.sh` copies only the public files into `_site/`. Add any new public file or folder to it, or it won't be published.
