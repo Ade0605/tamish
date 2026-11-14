@@ -1,6 +1,6 @@
 #!/bin/sh
 # Assemble the public site into _site/ (pages, assets and host config only; no README, workflows or docs).
-# Used by Cloudflare Pages (build command: sh build.sh, output directory: _site) and by the GitHub Pages workflow.
+# Used by Cloudflare Pages (build command: sh build.sh, output directory: _site).
 set -eu
 rm -rf _site
 mkdir _site
