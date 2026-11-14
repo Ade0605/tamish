@@ -1,0 +1,11 @@
+# Security headers for hosts that read a _headers file (Cloudflare Pages, Netlify).
+# GitHub Pages ignores this file and cannot send custom headers; the pages carry the same CSP in a <meta> tag.
+/*
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin
+  Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src https://formspree.io; form-action 'self'; base-uri 'none'; manifest-src 'self'; frame-ancestors 'none'; upgrade-insecure-requests

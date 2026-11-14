@@ -7,6 +7,7 @@ It is static HTML with no build step. It is published to GitHub Pages at **https
 
 - `index.html`: the whole page (HTML, CSS and a small script)
 - `privacy.html` and `terms.html`: draft privacy policy and terms of use, styled by `assets/legal.css`
+- `assets/site.css`, `assets/main.js`, `assets/js-on.js` and `assets/fonts.css`: the home page's styles and scripts and the self-hosted fonts, kept out of the HTML so the Content Security Policy can forbid inline code
 - `assets/`: logo files made from the supplied artwork (the navy mark and the navy and orange wordmarks), with white and orange recolours, the favicon, the Apple touch icon and the social share image (`og-image.png`)
 
 Brand colours sampled from the logo: navy `#0D3161`, orange `#F99235`.
@@ -39,3 +40,7 @@ To collect addresses, set `data-endpoint` on the form in `index.html` to any URL
    - `CNAME` record for `www`: `ade0605.github.io`
 3. **Custom domain:** Settings → Pages → Custom domain: `tamish.app`, Save, then tick **Enforce HTTPS** once the certificate is issued (can take up to a day). `.app` domains only work over HTTPS.
 4. Optional but recommended: verify the domain under your GitHub profile → Settings → Pages, so no one else can claim it.
+
+## Security
+
+See [SECURITY.md](SECURITY.md) for how to report a problem and how the site is protected. Keep pages free of inline `<script>`, `<style>` and `style=""`: the Content Security Policy blocks them.
