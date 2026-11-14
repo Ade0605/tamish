@@ -29,3 +29,6 @@ li{margin-top:6px}
 .toc a:hover{border-color:var(--navy)}
 footer{border-top:1.5px solid var(--line);max-width:780px;margin:0 auto;padding:24px 22px 40px;color:var(--muted);font-size:14.5px;display:flex;gap:18px;flex-wrap:wrap}
 footer a{color:var(--muted)}
+
+/* 404 page */
+.nf main{text-align:center;padding-top:96px}.nf main img{width:72px;height:auto;margin:0 auto 24px}.nf .go{display:inline-block;margin-top:24px;background:var(--orange);color:var(--navy);padding:13px 26px;border-radius:999px;text-decoration:none}
